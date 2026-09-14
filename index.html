@@ -1,1 +1,564 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nailla &amp; Adem | 30.01.2027</title>
+<meta name="description" content="Convite de casamento de Nailla e Adem — 30 de janeiro de 2027, às 16h, no Sítio Campestre.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Pinyon+Script&family=Jost:wght@300;400;500;600&display=swap');
 
+  :root{
+    /* Paleta: branco, verde, rosa claro e amarelo manteiga */
+    --white:#ffffff;
+    --cream:#fdfaf4;
+    --card:#ffffff;
+    --green:#6d8564;
+    --green-dark:#51674a;
+    --green-pale:#e9efe4;
+    --rose:#f2dcdd;
+    --rose-deep:#d9a9ae;
+    --butter:#f7e7b2;
+    --butter-deep:#e8cf83;
+    --text:#3f4238;
+    --muted:#8b8d7e;
+    --line:#e9e5d8;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--cream);
+    font-family:'Jost',sans-serif;
+    color:var(--text);
+    overflow-x:hidden;
+  }
+
+  .wrap{max-width:480px;margin:0 auto;position:relative;background:var(--cream);}
+
+  /* ---------- PRELOADER ---------- */
+  #preloader{
+    position:fixed;inset:0;z-index:999;
+    background:var(--green);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    color:#fff;cursor:pointer;text-align:center;padding:0 30px;
+    transition:opacity .8s ease, visibility .8s ease;
+  }
+  #preloader.hidden{opacity:0;visibility:hidden;pointer-events:none;}
+  #preloader .mono{
+    width:110px;height:auto;margin-bottom:22px;filter:brightness(0) invert(1);opacity:.92;
+  }
+  #preloader .mono-text{
+    font-family:'Pinyon Script',cursive;font-size:64px;line-height:1;margin-bottom:18px;opacity:.95;
+  }
+  #preloader .names{
+    font-family:'Pinyon Script',cursive;font-size:38px;margin-bottom:6px;
+  }
+  #preloader .sub{font-size:10.5px;letter-spacing:4px;opacity:.8;margin-top:4px;}
+  #preloader .tap{
+    font-size:11px;letter-spacing:4px;text-transform:uppercase;opacity:.85;margin-top:30px;
+    border:1px solid rgba(255,255,255,.5);padding:12px 28px;border-radius:30px;
+    animation:pulse 2s ease-in-out infinite;
+  }
+  #preloader .hint{font-size:9.5px;letter-spacing:2px;opacity:.6;margin-top:14px;}
+  @keyframes pulse{0%,100%{opacity:.6;}50%{opacity:1;}}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease, transform .9s ease;}
+  .reveal.show{opacity:1;transform:translateY(0);}
+
+  /* ---------- FOTOS / PLACEHOLDER ---------- */
+  .ph{
+    background:linear-gradient(140deg,var(--green-pale) 0%,var(--rose) 55%,var(--butter) 100%);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--green-dark);font-size:10.5px;letter-spacing:3px;text-align:center;padding:20px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;height:100vh;min-height:640px;overflow:hidden;}
+  .hero > img{width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block;}
+  .hero > .ph{width:100%;height:100%;}
+  .hero::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.05) 55%, rgba(253,250,244,0.35) 78%, var(--cream) 100%);
+  }
+  .hero-content{
+    position:absolute;bottom:0;left:0;right:0;z-index:2;
+    text-align:center;padding:0 30px 92px 30px;
+  }
+  .hero-mono{width:56px;height:auto;margin-bottom:14px;opacity:.95;}
+  .hero-mono-text{font-family:'Pinyon Script',cursive;font-size:40px;color:var(--green-dark);line-height:1;margin-bottom:6px;}
+  .hero-names{
+    font-family:'Cormorant Garamond',serif;font-weight:500;
+    font-size:clamp(34px,10.5vw,44px);color:#2f3229;line-height:1.1;
+  }
+  .hero-names .amp{font-family:'Pinyon Script',cursive;color:var(--green-dark);font-size:.82em;padding:0 6px;}
+  .hero-loc{
+    font-size:11px;letter-spacing:4px;color:var(--green-dark);margin-top:12px;font-weight:500;
+  }
+
+  /* ---------- GENERIC SECTION ---------- */
+  section{padding:64px 32px;text-align:center;position:relative;}
+  .eyebrow{font-size:11.5px;letter-spacing:3.5px;color:var(--green);font-weight:500;margin-bottom:8px;text-transform:uppercase;}
+  .title{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--text);font-weight:500;}
+  .title em{font-style:italic;color:var(--green-dark);font-weight:500;}
+  .diamond-divider{width:7px;height:7px;background:var(--rose-deep);transform:rotate(45deg);margin:20px auto;}
+
+  /* floating card */
+  .card{
+    background:var(--card);border-radius:18px;
+    box-shadow:0 18px 46px -18px rgba(63,66,56,.18);
+    padding:38px 28px;
+  }
+
+  /* ---------- VERSE CARD (over hero) ---------- */
+  .verse-card-wrap{margin-top:-70px;padding:0 26px;position:relative;z-index:3;}
+  .verse-card{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;line-height:1.7;color:#55584c;
+  }
+  .verse-ref{font-family:'Jost';font-style:normal;font-size:11px;letter-spacing:2.5px;color:var(--green);margin-top:14px;font-weight:500;}
+
+  /* ---------- DATA / LOCAL ---------- */
+  .datalocal{display:flex;margin-top:34px;}
+  .datalocal > div{flex:1;padding:0 8px;}
+  .datalocal .sep{width:1px;background:var(--line);flex:none;padding:0;}
+  .dl-label{font-size:10.5px;letter-spacing:2.5px;color:var(--muted);margin-bottom:8px;}
+  .dl-value{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--text);}
+  .dl-sub{font-size:11.5px;color:var(--muted);margin-top:2px;}
+
+  /* ---------- VENUE CARD ---------- */
+  .venue-photo{width:100%;border-radius:16px;overflow:hidden;margin-bottom:26px;}
+  .venue-photo img{width:100%;display:block;}
+  .badge{
+    display:inline-block;background:var(--butter);color:#7a6420;
+    font-size:11px;letter-spacing:2.5px;font-weight:500;padding:7px 18px;border-radius:30px;margin-bottom:18px;
+  }
+  .venue-time{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;color:var(--green-dark);margin-bottom:4px;}
+  .venue-name{font-family:'Cormorant Garamond',serif;font-size:27px;color:var(--text);margin-bottom:10px;}
+  .venue-addr{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:24px;}
+  .venue-note{font-size:11.5px;color:var(--green-dark);background:var(--green-pale);border-radius:12px;padding:12px 16px;margin-bottom:24px;line-height:1.7;}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    border:1px solid #cdcbb8;border-radius:30px;padding:14px 30px;
+    font-size:11.5px;letter-spacing:2px;color:var(--text);text-decoration:none;background:transparent;
+  }
+  .btn svg{width:15px;height:15px;flex-shrink:0;}
+  .btn-filled{
+    background:var(--green);color:#fff;border-color:var(--green);
+    font-weight:500;padding:16px 30px;font-size:12px;
+  }
+  .btn-filled svg{stroke:#fff;}
+
+  /* ---------- COUNTDOWN ---------- */
+  .countdown{display:flex;justify-content:center;gap:10px;margin-top:30px;}
+  .countdown .box{flex:1;max-width:80px;}
+  .countdown .num{
+    font-family:'Cormorant Garamond',serif;font-size:38px;color:var(--text);
+    background:var(--card);border-radius:12px;padding:14px 0;
+    box-shadow:0 10px 26px -14px rgba(63,66,56,.18);
+  }
+  .countdown .lbl{font-size:9.5px;letter-spacing:1.5px;color:var(--muted);margin-top:8px;}
+
+  /* ---------- MANUAL ---------- */
+  .manual-photo{width:100%;overflow:hidden;}
+  .manual-photo img{width:100%;height:auto;display:block;}
+  .manual-photo .ph{width:100%;height:340px;}
+  .manual-card{margin-top:-56px;}
+  .tip{display:flex;flex-direction:column;align-items:center;padding:22px 6px;}
+  .tip:not(:last-child){border-bottom:1px solid var(--line);}
+  .tip svg{width:26px;height:26px;stroke:var(--green);margin-bottom:14px;}
+  .tip p{font-size:13.5px;line-height:1.8;color:#5d6053;max-width:300px;}
+  .tip b{color:var(--text);font-weight:500;}
+
+  /* ---------- PALETA ---------- */
+  .palette{display:flex;justify-content:center;gap:12px;margin-top:18px;}
+  .palette .sw{text-align:center;}
+  .palette .dot{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);margin:0 auto 7px auto;}
+  .palette .nm{font-size:8.5px;letter-spacing:1.2px;color:var(--muted);text-transform:uppercase;}
+
+  /* ---------- MUSIC BAR ---------- */
+  .music-note{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:11px;letter-spacing:1.5px;color:var(--muted);
+    border:1px solid var(--line);border-radius:30px;padding:9px 20px;margin-top:8px;
+    text-decoration:none;background:none;font-family:'Jost';cursor:pointer;
+  }
+  .music-note svg{width:13px;height:13px;stroke:var(--green);}
+
+  /* ---------- PRESENTES ---------- */
+  .pix-title{font-size:11.5px;letter-spacing:2.5px;color:var(--green);margin:34px 0 22px 0;font-weight:500;
+    display:flex;align-items:center;gap:14px;}
+  .pix-title::before,.pix-title::after{content:'';flex:1;height:1px;background:var(--line);}
+  .pix-box{
+    background:var(--green-pale);border-radius:16px;padding:22px 20px;margin-top:6px;
+  }
+  .pix-key{font-family:'Jost';font-size:15px;color:var(--text);font-weight:500;letter-spacing:.5px;word-break:break-all;}
+  .copy-btn{
+    display:inline-flex;align-items:center;gap:8px;margin-top:16px;
+    background:var(--green-dark);color:#fff;border:none;border-radius:30px;
+    padding:11px 24px;font-size:11px;letter-spacing:2px;font-family:'Jost';cursor:pointer;
+  }
+  .copy-btn svg{width:13px;height:13px;stroke:#fff;}
+  .signature{font-family:'Pinyon Script',cursive;font-size:30px;color:var(--green-dark);margin-top:22px;}
+  .small-note{font-size:11px;color:var(--muted);margin-top:8px;}
+
+  /* ---------- RSVP ---------- */
+  .rsvp-card p{font-size:13.5px;line-height:1.9;color:#5d6053;margin-bottom:26px;}
+  .rsvp-card b{color:var(--green-dark);}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:60px 32px 50px 32px;text-align:center;}
+  footer .mono{width:64px;margin-bottom:16px;}
+  footer .mono-text{font-family:'Pinyon Script',cursive;font-size:44px;color:var(--green-dark);line-height:1;margin-bottom:10px;}
+  footer .names{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--text);}
+  footer .names em{font-family:'Pinyon Script',cursive;font-style:normal;color:var(--green-dark);padding:0 4px;}
+  footer .date{font-size:11px;letter-spacing:3px;color:var(--muted);margin-top:8px;}
+  footer .verse{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13.5px;color:var(--muted);margin-top:18px;}
+
+  /* floating music button */
+  #floatMusic{
+    position:fixed;bottom:22px;right:22px;z-index:50;
+    display:flex;align-items:center;gap:8px;
+    background:var(--card);color:var(--text);border:none;
+    border-radius:30px;padding:12px 18px;cursor:pointer;
+    box-shadow:0 10px 30px -10px rgba(63,66,56,.3);
+    font-size:10.5px;letter-spacing:1.5px;font-family:'Jost';
+    opacity:0;transform:translateY(10px);transition:opacity .6s ease, transform .6s ease;
+  }
+  #floatMusic.show{opacity:1;transform:translateY(0);}
+  #floatMusic svg{width:14px;height:14px;stroke:var(--green);}
+
+  /* player do YouTube escondido */
+  #ytwrap{position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;bottom:0;left:0;overflow:hidden;}
+</style>
+</head>
+<body>
+
+<div id="preloader">
+  <!-- MONOGRAMA: salve o arquivo como fotos/monograma.png (fundo transparente).
+       Enquanto não existir, aparece o monograma em texto automaticamente. -->
+  <img class="mono" src="fotos/monograma.png" alt="NA" data-mono>
+  <div class="mono-text" hidden>N<span style="font-size:.7em">&amp;</span>A</div>
+  <div class="names">Nailla &amp; Adem</div>
+  <div class="sub">30 · 01 · 2027</div>
+  <div class="tap">Toque para abrir</div>
+  <div class="hint">com música ♪</div>
+</div>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <!-- FOTO 1: salve como fotos/foto-1.jpg -->
+    <img src="fotos/foto-1.jpg" alt="Nailla e Adem" data-photo>
+    <div class="hero-content">
+      <img class="hero-mono" src="fotos/monograma.png" alt="NA" data-mono>
+      <div class="hero-mono-text" hidden>N<span style="font-size:.7em">&amp;</span>A</div>
+      <div class="hero-names">Nailla <span class="amp">&amp;</span> Adem</div>
+      <div class="hero-loc">SÍTIO CAMPESTRE</div>
+    </div>
+  </div>
+
+  <!-- VERSÍCULO / FRASE -->
+  <div class="verse-card-wrap reveal">
+    <div class="card verse-card">
+      &ldquo;O amor tudo sofre, tudo crê, tudo espera, tudo suporta.&rdquo;
+      <div class="verse-ref">— 1 CORÍNTIOS 13:7</div>
+    </div>
+  </div>
+
+  <!-- O GRANDE DIA -->
+  <section class="reveal">
+    <div class="eyebrow">O grande dia</div>
+    <div class="title">Celebrem <em>conosco</em></div>
+    <div class="diamond-divider"></div>
+
+    <div class="datalocal">
+      <div>
+        <div class="dl-label">DATA</div>
+        <div class="dl-value">30 de Janeiro</div>
+        <div class="dl-sub">Sábado · 2027</div>
+      </div>
+      <div class="sep"></div>
+      <div>
+        <div class="dl-label">LOCAL</div>
+        <div class="dl-value">Sítio Campestre</div>
+        <div class="dl-sub">Cerimônia e recepção</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERIMÔNIA & RECEPÇÃO -->
+  <section class="reveal" style="padding-top:0;">
+    <div class="badge">CERIMÔNIA &amp; RECEPÇÃO</div>
+    <div class="venue-time">às 16h00</div>
+    <div class="venue-name">Sítio Campestre</div>
+    <div class="venue-addr">
+      <!-- ENDEREÇO COMPLETO: substitua a linha abaixo -->
+      Endereço completo em breve
+    </div>
+    <div class="venue-note">
+      A cerimônia e a recepção acontecem no mesmo lugar — você não precisa se deslocar depois do &ldquo;sim&rdquo;.
+    </div>
+    <!-- LINK DO MAPS: troque o href abaixo pelo link exato do Google Maps do sítio -->
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=S%C3%ADtio+Campestre" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+      VER NO MAPA
+    </a>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="reveal" style="padding-top:8px;">
+    <div class="eyebrow">A contagem começou</div>
+    <div class="title">Falta <em>pouco</em></div>
+    <div class="countdown">
+      <div class="box"><div class="num" id="cd-dias">00</div><div class="lbl">DIAS</div></div>
+      <div class="box"><div class="num" id="cd-horas">00</div><div class="lbl">HORAS</div></div>
+      <div class="box"><div class="num" id="cd-min">00</div><div class="lbl">MIN</div></div>
+      <div class="box"><div class="num" id="cd-seg">00</div><div class="lbl">SEG</div></div>
+    </div>
+  </section>
+
+  <!-- MANUAL DOS CONVIDADOS -->
+  <div class="manual-photo reveal">
+    <!-- FOTO 2: salve como fotos/foto-2.jpg -->
+    <img src="fotos/foto-2.jpg" alt="Nailla e Adem" data-photo>
+  </div>
+  <section class="manual-card reveal" style="padding-top:0;">
+    <div class="card" style="padding:34px 0 8px 0;">
+      <div class="eyebrow">Manual dos convidados</div>
+      <div class="title" style="margin-bottom:10px;">Antes de <em>celebrar</em></div>
+      <div class="diamond-divider"></div>
+
+      <div class="tip">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M6 3l2 2h8l2-2 3 4-3 2v11H6V9L3 7z"/></svg>
+        <p><b>Traje: social / passeio.</b><br>
+        Pedimos apenas que evitem o branco, reservado à noiva. Fora isso, fiquem à vontade para celebrar com elegância e conforto.</p>
+      </div>
+
+      <div class="tip">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 3l1.9 4.6L18 9l-4.1 1.4L12 15l-1.9-4.6L6 9l4.1-1.4z"/></svg>
+        <p><b>Nossa paleta de cores</b>, caso queiram se inspirar na hora de escolher o look:</p>
+        <div class="palette">
+          <div class="sw"><div class="dot" style="background:var(--white);"></div><div class="nm">Branco</div></div>
+          <div class="sw"><div class="dot" style="background:var(--green);"></div><div class="nm">Verde</div></div>
+          <div class="sw"><div class="dot" style="background:var(--rose);"></div><div class="nm">Rosa claro</div></div>
+          <div class="sw"><div class="dot" style="background:var(--butter);"></div><div class="nm">Manteiga</div></div>
+        </div>
+      </div>
+
+      <div class="tip">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        <p>Seja <b>pontual</b> — a cerimônia começa às <b>16h00</b>, no horário.</p>
+      </div>
+
+      <div class="tip">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M3 20h18"/><path d="M6 20V9l6-5 6 5v11"/><path d="M10 20v-6h4v6"/></svg>
+        <p>Como é uma celebração <b>ao ar livre, em um sítio</b>, vale considerar sapatos confortáveis — saltos finos podem afundar na grama.</p>
+      </div>
+
+      <div class="tip" style="border-bottom:none;">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 21s-7-4.5-7-9.8A4.2 4.2 0 0 1 12 8a4.2 4.2 0 0 1 7 3.2C19 16.5 12 21 12 21z"/></svg>
+        <p>E o mais importante: <b>aproveitem muito!</b></p>
+      </div>
+    </div>
+
+    <button class="music-note" id="musicToggle2" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>
+      <span>TOCAR NOSSA MÚSICA</span>
+    </button>
+  </section>
+
+  <!-- LISTA DE PRESENTES -->
+  <section class="reveal">
+    <div class="eyebrow">Lista de presentes</div>
+    <div class="title">Sugestões de <em>presentes</em></div>
+    <div class="diamond-divider"></div>
+
+    <div class="card" style="margin-top:8px;">
+      <p style="font-size:13.5px;line-height:1.9;color:#5d6053;margin-bottom:24px;">
+        A presença de vocês já é o nosso maior presente. Mas, se quiserem nos presentear, deixamos aqui a nossa lista.
+      </p>
+      <a class="btn btn-filled" href="https://noivos.casar.com/naillaeadem" target="_blank" rel="noopener" style="width:100%;justify-content:center;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 12h18"/><path d="M12 8v13"/><path d="M12 8c-1.7 0-3-1-3-2.5S10.3 3 12 3s3 1 3 2.5S13.7 8 12 8z"/></svg>
+        VER LISTA DE PRESENTES
+      </a>
+
+      <!-- ===== BLOCO DO PIX (desativado) =====
+           Para ativar: apague esta primeira linha de comentário (a que abre o bloco)
+           e também a última linha do bloco (a que o fecha, logo depois do botão).
+           Depois é só trocar CHAVE PIX AQUI pela chave de vocês.
+      <div class="pix-title">PRESENTEAR COM PIX</div>
+      <div class="pix-box">
+        <div class="pix-key" id="pixKey">CHAVE PIX AQUI</div>
+        <button class="copy-btn" onclick="copyPix()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span id="copyLabel">COPIAR CHAVE</span>
+        </button>
+      </div>
+      ===== fim do PIX ===== -->
+
+      <div class="signature">Nailla &amp; Adem</div>
+      <div class="small-note">Com carinho, esperamos vocês</div>
+    </div>
+  </section>
+
+  <!-- CONFIRMAÇÃO DE PRESENÇA -->
+  <section class="reveal">
+    <div class="eyebrow">Confirmação de presença</div>
+    <div class="title">Você <em>vem</em>?</div>
+    <div class="diamond-divider"></div>
+
+    <div class="card rsvp-card" style="margin-top:8px;">
+      <p>Sua presença fará deste dia um momento ainda mais especial.<br>
+      Confirme com um toque abaixo — você será levado direto ao nosso site no <b>Casar.com</b>.</p>
+      <a class="btn btn-filled" href="https://noivos.casar.com/naillaeadem" target="_blank" rel="noopener" style="width:100%;justify-content:center;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>
+        CONFIRMAR PRESENÇA
+      </a>
+
+      <!-- ===== BOTÃO DE WHATSAPP (desativado) =====
+           Para ativar: apague esta primeira linha de comentário (a que abre o bloco)
+           e também a última linha do bloco (a que o fecha, logo depois do botão).
+           Depois troque 55DDDNUMERO pelo número com DDI e DDD (ex.: 5585988887777).
+      <a class="btn" href="https://wa.me/55DDDNUMERO?text=Ol%C3%A1%21%20Quero%20confirmar%20minha%20presen%C3%A7a%20no%20casamento%20da%20Nailla%20e%20do%20Adem." target="_blank" rel="noopener" style="width:100%;justify-content:center;margin-top:14px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 1 1-4.2-7.6L21 3l-1.4 4.2A8.9 8.9 0 0 1 21 12z"/><path d="M8.5 9.5c0 4 2 6 6 6"/></svg>
+        CONFIRMAR PELO WHATSAPP
+      </a>
+      ===== fim do WhatsApp ===== -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="reveal">
+    <img class="mono" src="fotos/monograma.png" alt="NA" data-mono>
+    <div class="mono-text" hidden>N<span style="font-size:.7em">&amp;</span>A</div>
+    <div class="names">Nailla <em>&amp;</em> Adem</div>
+    <div class="date">30 DE JANEIRO DE 2027</div>
+    <div class="verse">Que o nosso amor seja sempre assim: leve, verdadeiro e cheio de fé</div>
+  </footer>
+
+</div>
+
+<button id="floatMusic" type="button">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>
+  <span id="floatMusicLabel">NOSSA MÚSICA</span>
+</button>
+
+<!-- Player invisível do YouTube (música do convite) -->
+<div id="ytwrap"><div id="ytplayer"></div></div>
+
+<script>
+  /* ---------- MÚSICA (YouTube) ---------- */
+  var YT_ID = '3Bm4fN8EXHk';   // https://youtu.be/3Bm4fN8EXHk
+  var player = null, ytReady = false, playing = false;
+
+  (function loadYT(){
+    var s = document.createElement('script');
+    s.src = 'https://www.youtube.com/iframe_api';
+    document.head.appendChild(s);
+  })();
+
+  window.onYouTubeIframeAPIReady = function(){
+    player = new YT.Player('ytplayer', {
+      height:'1', width:'1', videoId: YT_ID,
+      playerVars:{ autoplay:0, controls:0, loop:1, playlist:YT_ID, playsinline:1, rel:0 },
+      events:{
+        onReady: function(){ ytReady = true; },
+        onStateChange: function(e){
+          playing = (e.data === YT.PlayerState.PLAYING);
+          updateMusicLabels();
+        }
+      }
+    });
+  };
+
+  function startMusic(){
+    if(!ytReady || !player) return;
+    try{ player.unMute(); player.setVolume(60); player.playVideo(); }catch(e){}
+  }
+  function toggleMusic(){
+    if(!ytReady || !player){ window.open('https://youtu.be/' + YT_ID, '_blank'); return; }
+    try{ playing ? player.pauseVideo() : (player.unMute(), player.playVideo()); }catch(e){}
+  }
+  function updateMusicLabels(){
+    var a = document.getElementById('floatMusicLabel');
+    var b = document.querySelector('#musicToggle2 span');
+    if(a) a.textContent = playing ? 'PAUSAR MÚSICA' : 'NOSSA MÚSICA';
+    if(b) b.textContent = playing ? 'TOCANDO: NOSSA MÚSICA' : 'TOCAR NOSSA MÚSICA';
+  }
+
+  document.getElementById('floatMusic').addEventListener('click', toggleMusic);
+  document.getElementById('musicToggle2').addEventListener('click', toggleMusic);
+
+  /* ---------- PRELOADER ---------- */
+  var preloader = document.getElementById('preloader');
+  preloader.addEventListener('click', function(){
+    preloader.classList.add('hidden');
+    startMusic();                         // o toque libera o áudio no celular
+    document.getElementById('floatMusic').classList.add('show');
+  });
+
+  /* ---------- FALLBACK DE IMAGENS ---------- */
+  // Monograma: se fotos/monograma.png não existir, mostra o monograma em texto.
+  function monoFallback(img){
+    img.hidden = true;
+    var alt = img.parentElement.querySelector('.mono-text, .hero-mono-text');
+    if(alt) alt.hidden = false;
+  }
+  document.querySelectorAll('img[data-mono]').forEach(function(img){
+    img.addEventListener('error', function(){ monoFallback(img); });
+    if(img.complete && img.naturalWidth === 0) monoFallback(img);
+  });
+  // Fotos: se ainda não foram enviadas, mostra um bloco na paleta do casamento.
+  function photoFallback(img){
+    if(!img.parentElement) return;
+    var ph = document.createElement('div');
+    ph.className = 'ph';
+    ph.textContent = 'FOTO EM BREVE';
+    img.replaceWith(ph);
+  }
+  document.querySelectorAll('img[data-photo]').forEach(function(img){
+    img.addEventListener('error', function(){ photoFallback(img); });
+    if(img.complete && img.naturalWidth === 0) photoFallback(img);
+  });
+
+  /* ---------- CONTAGEM REGRESSIVA ---------- */
+  var target = new Date('2027-01-30T16:00:00-03:00').getTime();
+  function updateCountdown(){
+    var diff = target - new Date().getTime();
+    if(diff < 0) diff = 0;
+    var d = Math.floor(diff/(1000*60*60*24));
+    var h = Math.floor((diff/(1000*60*60))%24);
+    var m = Math.floor((diff/(1000*60))%60);
+    var s = Math.floor((diff/1000)%60);
+    document.getElementById('cd-dias').textContent  = String(d).padStart(2,'0');
+    document.getElementById('cd-horas').textContent = String(h).padStart(2,'0');
+    document.getElementById('cd-min').textContent   = String(m).padStart(2,'0');
+    document.getElementById('cd-seg').textContent   = String(s).padStart(2,'0');
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  /* ---------- COPIAR PIX (só funciona se o bloco PIX estiver ativo) ---------- */
+  function copyPix(){
+    var el = document.getElementById('pixKey');
+    if(!el) return;
+    navigator.clipboard.writeText(el.textContent.trim()).then(function(){
+      var label = document.getElementById('copyLabel');
+      label.textContent = 'COPIADO!';
+      setTimeout(function(){ label.textContent = 'COPIAR CHAVE'; }, 2000);
+    });
+  }
+
+  /* ---------- REVEAL AO ROLAR ---------- */
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('show'); } });
+  }, {threshold:0.15});
+  document.querySelectorAll('.reveal').forEach(function(el){ observer.observe(el); });
+</script>
+
+</body>
+</html>
