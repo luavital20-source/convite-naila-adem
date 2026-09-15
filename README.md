@@ -21,12 +21,15 @@ mantendo o matiz — não é outra cor, é o mesmo tom em intensidades diferente
 | `#BC626F` | Botões, ícones, monograma e brasão |
 | `#9F5661` | Textos, títulos em itálico, rótulos, nome do casal |
 
-**Paleta completa do casamento** (aparece nas bolinhas do manual dos convidados,
-como referência de traje para os convidados):
+**Paleta completa do casamento**, registrada aqui para referência (não é
+mais exibida no convite):
 
 `#707D69` verde · `#CAD4AF` verde claro · `#EACB63` dourado ·
 `#F7E6A8` e `#FDDE86` manteiga · `#E9A6B0` e `#EEBFBB` rosa ·
 `#F1D3D4` e `#FCD9DF` rosa claro · `#FED4AA` pêssego
+
+**Dress code:** o manual pede que os convidados evitem **branco, amarelo
+manteiga e rosa claro** — cores reservadas à noiva e à decoração.
 
 **Fontes**
 
