@@ -9,17 +9,24 @@ Convite digital em página única (`index.html`), feito para abrir no celular.
 
 Tudo foi tirado do PDF em `originais/Identidade Visual Nailla e Adem.pdf`.
 
-**Paleta oficial**
+**Cor dos detalhes: rosa `#E9A6B0`**
 
-| Cor | Código | Onde aparece |
-|---|---|---|
-| Verde | `#707D69` | Cor principal: abertura, botões, títulos |
-| Verde claro | `#CAD4AF` | Fundos suaves |
-| Dourado | `#EACB63` | Detalhes |
-| Amarelo manteiga | `#F7E6A8` / `#FDDE86` | Selo "Cerimônia & Recepção" |
-| Rosa | `#EEBFBB` / `#E9A6B0` | Losangos e acentos |
-| Rosa claro | `#F1D3D4` / `#FCD9DF` | Fundos suaves |
-| Pêssego | `#FED4AA` | Acento |
+Todos os detalhes do convite estão nesse rosa. Como ele é claro demais para
+texto sobre fundo claro, os textos e botões usam o **mesmo rosa escurecido**,
+mantendo o matiz — não é outra cor, é o mesmo tom em intensidades diferentes:
+
+| Tom | Onde é usado |
+|---|---|
+| `#E9A6B0` | Tela de abertura, losangos, fundos — o tom pedido, puro |
+| `#BC626F` | Botões, ícones, monograma e brasão |
+| `#9F5661` | Textos, títulos em itálico, rótulos, nome do casal |
+
+**Paleta completa do casamento** (aparece nas bolinhas do manual dos convidados,
+como referência de traje para os convidados):
+
+`#707D69` verde · `#CAD4AF` verde claro · `#EACB63` dourado ·
+`#F7E6A8` e `#FDDE86` manteiga · `#E9A6B0` e `#EEBFBB` rosa ·
+`#F1D3D4` e `#FCD9DF` rosa claro · `#FED4AA` pêssego
 
 **Fontes**
 
@@ -37,9 +44,8 @@ Tudo foi tirado do PDF em `originais/Identidade Visual Nailla e Adem.pdf`.
 |---|---|
 | `foto-1.jpg` | Capa, tela inteira |
 | `foto-2.jpg` | Antes do "Manual dos convidados" |
-| `monograma.png` | Abertura e capa (verde, fundo transparente) |
-| `monograma-rosa.png` | Mesma arte em rosa, caso queiram trocar |
-| `brasao.png` | Rodapé — monograma com a moldura floral |
+| `monograma.png` | Abertura e capa (rosa, fundo transparente) |
+| `brasao.png` | Rodapé — monograma com a moldura floral, em rosa |
 | `nome-casal.png` | "Nailla e Adem" na fonte Aerotis |
 
 Os arquivos que você enviou estão preservados em `originais/`.

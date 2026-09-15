@@ -9,26 +9,30 @@
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Arapey:ital@0;1&family=Italianno&family=Jost:wght@300;400;500;600&display=swap');
 
   :root{
-    /* Paleta oficial da identidade visual de Nailla e Adem */
+    /* Paleta oficial da identidade visual de Nailla e Adem.
+       O rosa #E9A6B0 e a cor dos detalhes do convite; os tons
+       mais escuros sao o mesmo rosa, so que legiveis em texto. */
     --white:#ffffff;
     --cream:#fdfaf3;
     --card:#ffffff;
-    --green:#707D69;        /* verde principal */
-    --green-dark:#59654f;
-    --green-pale:#CAD4AF;   /* verde claro */
-    --green-wash:#eef1e6;
-    --rose:#F1D3D4;         /* rosa claro */
-    --rose-soft:#FCD9DF;
-    --rose-mid:#EEBFBB;
-    --rose-deep:#E9A6B0;    /* rosa */
-    --butter:#F7E6A8;       /* amarelo manteiga */
+    --rose:#E9A6B0;         /* rosa principal — fundos e decoracao */
+    --rose-mid:#BC626F;     /* botoes e icones */
+    --rose-dark:#9F5661;    /* textos e titulos */
+    --rose-soft:#F1D3D4;    /* rosa claro */
+    --rose-pale:#FCD9DF;    /* rosa mais claro */
+    --rose-wash:#fceff1;    /* fundo suave */
+    --rose-mist:#EEBFBB;
+    --green:#707D69;        /* verde da paleta do casamento (dress code) */
+    --green-pale:#CAD4AF;
+    --butter:#F7E6A8;
     --butter-soft:#FDDE86;
-    --butter-deep:#EACB63;  /* dourado */
+    --butter-deep:#EACB63;
     --peach:#FED4AA;
     --text:#3f4238;
     --muted:#8b8d7e;
-    --line:#e9e5d8;
+    --line:#ece4e0;
   }
+
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
 
@@ -44,7 +48,7 @@
   /* ---------- PRELOADER ---------- */
   #preloader{
     position:fixed;inset:0;z-index:999;
-    background:var(--green);
+    background:var(--rose);
     display:flex;flex-direction:column;align-items:center;justify-content:center;
     color:#fff;cursor:pointer;text-align:center;padding:0 30px;
     transition:opacity .8s ease, visibility .8s ease;
@@ -75,9 +79,9 @@
 
   /* ---------- FOTOS / PLACEHOLDER ---------- */
   .ph{
-    background:linear-gradient(140deg,var(--green-pale) 0%,var(--rose-soft) 55%,var(--butter) 100%);
+    background:linear-gradient(140deg,var(--rose-pale) 0%,var(--rose-soft) 55%,var(--butter) 100%);
     display:flex;align-items:center;justify-content:center;
-    color:var(--green-dark);font-size:10.5px;letter-spacing:3px;text-align:center;padding:20px;
+    color:var(--rose-dark);font-size:10.5px;letter-spacing:3px;text-align:center;padding:20px;
   }
 
   /* ---------- HERO ---------- */
@@ -93,23 +97,23 @@
     text-align:center;padding:0 30px 92px 30px;
   }
   .hero-mono{width:66px;height:auto;margin-bottom:10px;opacity:.95;}
-  .hero-mono-text{font-family:'Italianno',cursive;font-size:40px;color:var(--green-dark);line-height:1;margin-bottom:6px;}
+  .hero-mono-text{font-family:'Italianno',cursive;font-size:40px;color:var(--rose-dark);line-height:1;margin-bottom:6px;}
   .hero-names-img{width:min(82vw,360px);height:auto;display:block;margin:0 auto;}
   .hero-names{
     font-family:'Cormorant Garamond',serif;font-weight:500;
     font-size:clamp(34px,10.5vw,44px);color:#2f3229;line-height:1.1;
   }
-  .hero-names .amp{font-family:'Italianno',cursive;color:var(--green-dark);font-size:.82em;padding:0 6px;}
+  .hero-names .amp{font-family:'Italianno',cursive;color:var(--rose-dark);font-size:.82em;padding:0 6px;}
   .hero-loc{
-    font-family:'Jost',sans-serif;font-size:11px;letter-spacing:4px;color:var(--green-dark);margin-top:12px;font-weight:500;
+    font-family:'Jost',sans-serif;font-size:11px;letter-spacing:4px;color:var(--rose-dark);margin-top:12px;font-weight:500;
   }
 
   /* ---------- GENERIC SECTION ---------- */
   section{padding:64px 32px;text-align:center;position:relative;}
-  .eyebrow{font-family:'Jost',sans-serif;font-size:11.5px;letter-spacing:3.5px;color:var(--green);font-weight:500;margin-bottom:8px;text-transform:uppercase;}
+  .eyebrow{font-family:'Jost',sans-serif;font-size:11.5px;letter-spacing:3.5px;color:var(--rose-dark);font-weight:500;margin-bottom:8px;text-transform:uppercase;}
   .title{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--text);font-weight:500;}
-  .title em{font-style:italic;color:var(--green-dark);font-weight:500;}
-  .diamond-divider{width:7px;height:7px;background:var(--rose-deep);transform:rotate(45deg);margin:20px auto;}
+  .title em{font-style:italic;color:var(--rose-dark);font-weight:500;}
+  .diamond-divider{width:7px;height:7px;background:var(--rose);transform:rotate(45deg);margin:20px auto;}
 
   /* floating card */
   .card{
@@ -123,7 +127,7 @@
   .verse-card{
     font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;line-height:1.7;color:#55584c;
   }
-  .verse-ref{font-family:'Jost';font-style:normal;font-size:11px;letter-spacing:2.5px;color:var(--green);margin-top:14px;font-weight:500;}
+  .verse-ref{font-family:'Jost';font-style:normal;font-size:11px;letter-spacing:2.5px;color:var(--rose-dark);margin-top:14px;font-weight:500;}
 
   /* ---------- DATA / LOCAL ---------- */
   .datalocal{display:flex;margin-top:34px;}
@@ -140,10 +144,10 @@
     display:inline-block;background:var(--butter);color:#7a6420;font-family:'Jost',sans-serif;
     font-size:11px;letter-spacing:2.5px;font-weight:500;padding:7px 18px;border-radius:30px;margin-bottom:18px;
   }
-  .venue-time{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;color:var(--green-dark);margin-bottom:4px;}
+  .venue-time{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;color:var(--rose-dark);margin-bottom:4px;}
   .venue-name{font-family:'Cormorant Garamond',serif;font-size:27px;color:var(--text);margin-bottom:10px;}
   .venue-addr{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:24px;}
-  .venue-note{font-family:'Jost',sans-serif;font-size:11.5px;color:var(--green-dark);background:var(--green-wash);border-radius:12px;padding:12px 16px;margin-bottom:24px;line-height:1.7;}
+  .venue-note{font-family:'Jost',sans-serif;font-size:11.5px;color:var(--rose-dark);background:var(--rose-wash);border-radius:12px;padding:12px 16px;margin-bottom:24px;line-height:1.7;}
 
   .btn{
     display:inline-flex;align-items:center;gap:10px;
@@ -152,7 +156,7 @@
   }
   .btn svg{width:15px;height:15px;flex-shrink:0;}
   .btn-filled{
-    background:var(--green);color:#fff;border-color:var(--green);
+    background:var(--rose-mid);color:#fff;border-color:var(--rose-mid);
     font-weight:500;padding:16px 22px;font-size:11px;letter-spacing:1.4px;
   }
   .btn-filled svg{stroke:#fff;}
@@ -174,7 +178,7 @@
   .manual-card{margin-top:-56px;}
   .tip{display:flex;flex-direction:column;align-items:center;padding:22px 6px;}
   .tip:not(:last-child){border-bottom:1px solid var(--line);}
-  .tip svg{width:26px;height:26px;stroke:var(--green);margin-bottom:14px;}
+  .tip svg{width:26px;height:26px;stroke:var(--rose-mid);margin-bottom:14px;}
   .tip p{font-size:13.5px;line-height:1.8;color:#5d6053;max-width:300px;}
   .tip b{color:var(--text);font-weight:500;}
 
@@ -191,36 +195,36 @@
     border:1px solid var(--line);border-radius:30px;padding:9px 20px;margin-top:8px;
     text-decoration:none;background:none;font-family:'Jost';cursor:pointer;
   }
-  .music-note svg{width:13px;height:13px;stroke:var(--green);}
+  .music-note svg{width:13px;height:13px;stroke:var(--rose-mid);}
 
   /* ---------- PRESENTES ---------- */
-  .pix-title{font-family:'Jost',sans-serif;font-size:11.5px;letter-spacing:2.5px;color:var(--green);margin:34px 0 22px 0;font-weight:500;
+  .pix-title{font-family:'Jost',sans-serif;font-size:11.5px;letter-spacing:2.5px;color:var(--rose-dark);margin:34px 0 22px 0;font-weight:500;
     display:flex;align-items:center;gap:14px;}
   .pix-title::before,.pix-title::after{content:'';flex:1;height:1px;background:var(--line);}
   .pix-box{
-    background:var(--green-wash);border-radius:16px;padding:22px 20px;margin-top:6px;
+    background:var(--rose-wash);border-radius:16px;padding:22px 20px;margin-top:6px;
   }
   .pix-key{font-family:'Jost';font-size:15px;color:var(--text);font-weight:500;letter-spacing:.5px;word-break:break-all;}
   .copy-btn{
     display:inline-flex;align-items:center;gap:8px;margin-top:16px;
-    background:var(--green-dark);color:#fff;border:none;border-radius:30px;
+    background:var(--rose-mid);color:#fff;border:none;border-radius:30px;
     padding:11px 24px;font-size:11px;letter-spacing:2px;font-family:'Jost';cursor:pointer;
   }
   .copy-btn svg{width:13px;height:13px;stroke:#fff;}
-  .signature{font-family:'Italianno',cursive;font-size:30px;color:var(--green-dark);margin-top:22px;}
+  .signature{font-family:'Italianno',cursive;font-size:30px;color:var(--rose-dark);margin-top:22px;}
   .small-note{font-family:'Jost',sans-serif;font-size:11px;color:var(--muted);margin-top:8px;}
 
   /* ---------- RSVP ---------- */
   .rsvp-card p{font-size:13.5px;line-height:1.9;color:#5d6053;margin-bottom:26px;}
-  .rsvp-card b{color:var(--green-dark);}
+  .rsvp-card b{color:var(--rose-dark);}
 
   /* ---------- FOOTER ---------- */
   footer{padding:60px 32px 50px 32px;text-align:center;}
   footer .mono{width:128px;margin-bottom:18px;opacity:.9;}
-  footer .mono-text{font-family:'Italianno',cursive;font-size:44px;color:var(--green-dark);line-height:1;margin-bottom:10px;}
+  footer .mono-text{font-family:'Italianno',cursive;font-size:44px;color:var(--rose-dark);line-height:1;margin-bottom:10px;}
   footer .names-img{width:min(64vw,260px);height:auto;margin:0 auto;display:block;}
   footer .names{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--text);}
-  footer .names em{font-family:'Italianno',cursive;font-style:normal;color:var(--green-dark);padding:0 4px;}
+  footer .names em{font-family:'Italianno',cursive;font-style:normal;color:var(--rose-dark);padding:0 4px;}
   footer .date{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:3px;color:var(--muted);margin-top:8px;}
   footer .verse{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13.5px;color:var(--muted);margin-top:18px;}
 
@@ -235,7 +239,7 @@
     opacity:0;transform:translateY(10px);transition:opacity .6s ease, transform .6s ease;
   }
   #floatMusic.show{opacity:1;transform:translateY(0);}
-  #floatMusic svg{width:14px;height:14px;stroke:var(--green);}
+  #floatMusic svg{width:14px;height:14px;stroke:var(--rose-mid);}
 
   /* player do YouTube escondido */
   #ytwrap{position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;bottom:0;left:0;overflow:hidden;}
@@ -354,8 +358,8 @@
           <div class="sw"><div class="dot" style="background:var(--green);"></div><div class="nm">Verde</div></div>
           <div class="sw"><div class="dot" style="background:var(--butter-deep);"></div><div class="nm">Dourado</div></div>
           <div class="sw"><div class="dot" style="background:var(--butter);"></div><div class="nm">Manteiga</div></div>
-          <div class="sw"><div class="dot" style="background:var(--rose-mid);"></div><div class="nm">Rosa</div></div>
-          <div class="sw"><div class="dot" style="background:var(--rose);"></div><div class="nm">Rosa claro</div></div>
+          <div class="sw"><div class="dot" style="background:var(--rose);"></div><div class="nm">Rosa</div></div>
+          <div class="sw"><div class="dot" style="background:var(--rose-soft);"></div><div class="nm">Rosa claro</div></div>
         </div>
       </div>
 
