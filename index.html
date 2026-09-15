@@ -6,31 +6,35 @@
 <title>Nailla &amp; Adem | 30.01.2027</title>
 <meta name="description" content="Convite de casamento de Nailla e Adem — 30 de janeiro de 2027, às 16h, no Sítio Campestre.">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Pinyon+Script&family=Jost:wght@300;400;500;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Arapey:ital@0;1&family=Italianno&family=Jost:wght@300;400;500;600&display=swap');
 
   :root{
-    /* Paleta: branco, verde, rosa claro e amarelo manteiga */
+    /* Paleta oficial da identidade visual de Nailla e Adem */
     --white:#ffffff;
-    --cream:#fdfaf4;
+    --cream:#fdfaf3;
     --card:#ffffff;
-    --green:#6d8564;
-    --green-dark:#51674a;
-    --green-pale:#e9efe4;
-    --rose:#f2dcdd;
-    --rose-deep:#d9a9ae;
-    --butter:#f7e7b2;
-    --butter-deep:#e8cf83;
+    --green:#707D69;        /* verde principal */
+    --green-dark:#59654f;
+    --green-pale:#CAD4AF;   /* verde claro */
+    --green-wash:#eef1e6;
+    --rose:#F1D3D4;         /* rosa claro */
+    --rose-soft:#FCD9DF;
+    --rose-mid:#EEBFBB;
+    --rose-deep:#E9A6B0;    /* rosa */
+    --butter:#F7E6A8;       /* amarelo manteiga */
+    --butter-soft:#FDDE86;
+    --butter-deep:#EACB63;  /* dourado */
+    --peach:#FED4AA;
     --text:#3f4238;
     --muted:#8b8d7e;
     --line:#e9e5d8;
   }
-
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
 
   body{
     background:var(--cream);
-    font-family:'Jost',sans-serif;
+    font-family:'Arapey',Georgia,serif;
     color:var(--text);
     overflow-x:hidden;
   }
@@ -50,18 +54,19 @@
     width:110px;height:auto;margin-bottom:22px;filter:brightness(0) invert(1);opacity:.92;
   }
   #preloader .mono-text{
-    font-family:'Pinyon Script',cursive;font-size:64px;line-height:1;margin-bottom:18px;opacity:.95;
+    font-family:'Italianno',cursive;font-size:64px;line-height:1;margin-bottom:18px;opacity:.95;
   }
+  #preloader .names-img{width:min(74vw,300px);height:auto;filter:brightness(0) invert(1);opacity:.95;}
   #preloader .names{
-    font-family:'Pinyon Script',cursive;font-size:38px;margin-bottom:6px;
+    font-family:'Italianno',cursive;font-size:44px;margin-bottom:6px;line-height:1;
   }
-  #preloader .sub{font-size:10.5px;letter-spacing:4px;opacity:.8;margin-top:4px;}
+  #preloader .sub{font-family:'Jost',sans-serif;font-size:10.5px;letter-spacing:4px;opacity:.8;margin-top:4px;}
   #preloader .tap{
-    font-size:11px;letter-spacing:4px;text-transform:uppercase;opacity:.85;margin-top:30px;
+    font-family:'Jost',sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;opacity:.85;margin-top:30px;
     border:1px solid rgba(255,255,255,.5);padding:12px 28px;border-radius:30px;
     animation:pulse 2s ease-in-out infinite;
   }
-  #preloader .hint{font-size:9.5px;letter-spacing:2px;opacity:.6;margin-top:14px;}
+  #preloader .hint{font-family:'Jost',sans-serif;font-size:9.5px;letter-spacing:2px;opacity:.6;margin-top:14px;}
   @keyframes pulse{0%,100%{opacity:.6;}50%{opacity:1;}}
 
   /* ---------- REVEAL ---------- */
@@ -70,37 +75,38 @@
 
   /* ---------- FOTOS / PLACEHOLDER ---------- */
   .ph{
-    background:linear-gradient(140deg,var(--green-pale) 0%,var(--rose) 55%,var(--butter) 100%);
+    background:linear-gradient(140deg,var(--green-pale) 0%,var(--rose-soft) 55%,var(--butter) 100%);
     display:flex;align-items:center;justify-content:center;
     color:var(--green-dark);font-size:10.5px;letter-spacing:3px;text-align:center;padding:20px;
   }
 
   /* ---------- HERO ---------- */
   .hero{position:relative;height:100vh;min-height:640px;overflow:hidden;}
-  .hero > img{width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block;}
+  .hero > img{width:100%;height:100%;object-fit:cover;object-position:center 52%;display:block;}
   .hero > .ph{width:100%;height:100%;}
   .hero::after{
     content:'';position:absolute;inset:0;
-    background:linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.05) 55%, rgba(253,250,244,0.35) 78%, var(--cream) 100%);
+    background:linear-gradient(to bottom, rgba(0,0,0,0.06) 0%, rgba(253,250,243,0) 38%, rgba(253,250,243,.55) 64%, rgba(253,250,243,.93) 80%, var(--cream) 89%);
   }
   .hero-content{
     position:absolute;bottom:0;left:0;right:0;z-index:2;
     text-align:center;padding:0 30px 92px 30px;
   }
-  .hero-mono{width:56px;height:auto;margin-bottom:14px;opacity:.95;}
-  .hero-mono-text{font-family:'Pinyon Script',cursive;font-size:40px;color:var(--green-dark);line-height:1;margin-bottom:6px;}
+  .hero-mono{width:66px;height:auto;margin-bottom:10px;opacity:.95;}
+  .hero-mono-text{font-family:'Italianno',cursive;font-size:40px;color:var(--green-dark);line-height:1;margin-bottom:6px;}
+  .hero-names-img{width:min(82vw,360px);height:auto;display:block;margin:0 auto;}
   .hero-names{
     font-family:'Cormorant Garamond',serif;font-weight:500;
     font-size:clamp(34px,10.5vw,44px);color:#2f3229;line-height:1.1;
   }
-  .hero-names .amp{font-family:'Pinyon Script',cursive;color:var(--green-dark);font-size:.82em;padding:0 6px;}
+  .hero-names .amp{font-family:'Italianno',cursive;color:var(--green-dark);font-size:.82em;padding:0 6px;}
   .hero-loc{
-    font-size:11px;letter-spacing:4px;color:var(--green-dark);margin-top:12px;font-weight:500;
+    font-family:'Jost',sans-serif;font-size:11px;letter-spacing:4px;color:var(--green-dark);margin-top:12px;font-weight:500;
   }
 
   /* ---------- GENERIC SECTION ---------- */
   section{padding:64px 32px;text-align:center;position:relative;}
-  .eyebrow{font-size:11.5px;letter-spacing:3.5px;color:var(--green);font-weight:500;margin-bottom:8px;text-transform:uppercase;}
+  .eyebrow{font-family:'Jost',sans-serif;font-size:11.5px;letter-spacing:3.5px;color:var(--green);font-weight:500;margin-bottom:8px;text-transform:uppercase;}
   .title{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--text);font-weight:500;}
   .title em{font-style:italic;color:var(--green-dark);font-weight:500;}
   .diamond-divider{width:7px;height:7px;background:var(--rose-deep);transform:rotate(45deg);margin:20px auto;}
@@ -123,7 +129,7 @@
   .datalocal{display:flex;margin-top:34px;}
   .datalocal > div{flex:1;padding:0 8px;}
   .datalocal .sep{width:1px;background:var(--line);flex:none;padding:0;}
-  .dl-label{font-size:10.5px;letter-spacing:2.5px;color:var(--muted);margin-bottom:8px;}
+  .dl-label{font-family:'Jost',sans-serif;font-size:10.5px;letter-spacing:2.5px;color:var(--muted);margin-bottom:8px;}
   .dl-value{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--text);}
   .dl-sub{font-size:11.5px;color:var(--muted);margin-top:2px;}
 
@@ -131,23 +137,23 @@
   .venue-photo{width:100%;border-radius:16px;overflow:hidden;margin-bottom:26px;}
   .venue-photo img{width:100%;display:block;}
   .badge{
-    display:inline-block;background:var(--butter);color:#7a6420;
+    display:inline-block;background:var(--butter);color:#7a6420;font-family:'Jost',sans-serif;
     font-size:11px;letter-spacing:2.5px;font-weight:500;padding:7px 18px;border-radius:30px;margin-bottom:18px;
   }
   .venue-time{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;color:var(--green-dark);margin-bottom:4px;}
   .venue-name{font-family:'Cormorant Garamond',serif;font-size:27px;color:var(--text);margin-bottom:10px;}
   .venue-addr{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:24px;}
-  .venue-note{font-size:11.5px;color:var(--green-dark);background:var(--green-pale);border-radius:12px;padding:12px 16px;margin-bottom:24px;line-height:1.7;}
+  .venue-note{font-family:'Jost',sans-serif;font-size:11.5px;color:var(--green-dark);background:var(--green-wash);border-radius:12px;padding:12px 16px;margin-bottom:24px;line-height:1.7;}
 
   .btn{
     display:inline-flex;align-items:center;gap:10px;
     border:1px solid #cdcbb8;border-radius:30px;padding:14px 30px;
-    font-size:11.5px;letter-spacing:2px;color:var(--text);text-decoration:none;background:transparent;
+    font-size:11.5px;letter-spacing:2px;color:var(--text);text-decoration:none;background:transparent;font-family:'Jost',sans-serif;
   }
   .btn svg{width:15px;height:15px;flex-shrink:0;}
   .btn-filled{
     background:var(--green);color:#fff;border-color:var(--green);
-    font-weight:500;padding:16px 30px;font-size:12px;
+    font-weight:500;padding:16px 22px;font-size:11px;letter-spacing:1.4px;
   }
   .btn-filled svg{stroke:#fff;}
 
@@ -159,11 +165,11 @@
     background:var(--card);border-radius:12px;padding:14px 0;
     box-shadow:0 10px 26px -14px rgba(63,66,56,.18);
   }
-  .countdown .lbl{font-size:9.5px;letter-spacing:1.5px;color:var(--muted);margin-top:8px;}
+  .countdown .lbl{font-family:'Jost',sans-serif;font-size:9.5px;letter-spacing:1.5px;color:var(--muted);margin-top:8px;}
 
   /* ---------- MANUAL ---------- */
   .manual-photo{width:100%;overflow:hidden;}
-  .manual-photo img{width:100%;height:auto;display:block;}
+  .manual-photo img{width:100%;height:62vh;max-height:520px;object-fit:cover;object-position:center 30%;display:block;}
   .manual-photo .ph{width:100%;height:340px;}
   .manual-card{margin-top:-56px;}
   .tip{display:flex;flex-direction:column;align-items:center;padding:22px 6px;}
@@ -173,10 +179,10 @@
   .tip b{color:var(--text);font-weight:500;}
 
   /* ---------- PALETA ---------- */
-  .palette{display:flex;justify-content:center;gap:12px;margin-top:18px;}
+  .palette{display:flex;justify-content:center;gap:10px;margin-top:18px;flex-wrap:wrap;}
   .palette .sw{text-align:center;}
-  .palette .dot{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);margin:0 auto 7px auto;}
-  .palette .nm{font-size:8.5px;letter-spacing:1.2px;color:var(--muted);text-transform:uppercase;}
+  .palette .dot{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);margin:0 auto 7px auto;}
+  .palette .nm{font-family:'Jost',sans-serif;font-size:8.5px;letter-spacing:1.2px;color:var(--muted);text-transform:uppercase;}
 
   /* ---------- MUSIC BAR ---------- */
   .music-note{
@@ -188,11 +194,11 @@
   .music-note svg{width:13px;height:13px;stroke:var(--green);}
 
   /* ---------- PRESENTES ---------- */
-  .pix-title{font-size:11.5px;letter-spacing:2.5px;color:var(--green);margin:34px 0 22px 0;font-weight:500;
+  .pix-title{font-family:'Jost',sans-serif;font-size:11.5px;letter-spacing:2.5px;color:var(--green);margin:34px 0 22px 0;font-weight:500;
     display:flex;align-items:center;gap:14px;}
   .pix-title::before,.pix-title::after{content:'';flex:1;height:1px;background:var(--line);}
   .pix-box{
-    background:var(--green-pale);border-radius:16px;padding:22px 20px;margin-top:6px;
+    background:var(--green-wash);border-radius:16px;padding:22px 20px;margin-top:6px;
   }
   .pix-key{font-family:'Jost';font-size:15px;color:var(--text);font-weight:500;letter-spacing:.5px;word-break:break-all;}
   .copy-btn{
@@ -201,8 +207,8 @@
     padding:11px 24px;font-size:11px;letter-spacing:2px;font-family:'Jost';cursor:pointer;
   }
   .copy-btn svg{width:13px;height:13px;stroke:#fff;}
-  .signature{font-family:'Pinyon Script',cursive;font-size:30px;color:var(--green-dark);margin-top:22px;}
-  .small-note{font-size:11px;color:var(--muted);margin-top:8px;}
+  .signature{font-family:'Italianno',cursive;font-size:30px;color:var(--green-dark);margin-top:22px;}
+  .small-note{font-family:'Jost',sans-serif;font-size:11px;color:var(--muted);margin-top:8px;}
 
   /* ---------- RSVP ---------- */
   .rsvp-card p{font-size:13.5px;line-height:1.9;color:#5d6053;margin-bottom:26px;}
@@ -210,11 +216,12 @@
 
   /* ---------- FOOTER ---------- */
   footer{padding:60px 32px 50px 32px;text-align:center;}
-  footer .mono{width:64px;margin-bottom:16px;}
-  footer .mono-text{font-family:'Pinyon Script',cursive;font-size:44px;color:var(--green-dark);line-height:1;margin-bottom:10px;}
+  footer .mono{width:128px;margin-bottom:18px;opacity:.9;}
+  footer .mono-text{font-family:'Italianno',cursive;font-size:44px;color:var(--green-dark);line-height:1;margin-bottom:10px;}
+  footer .names-img{width:min(64vw,260px);height:auto;margin:0 auto;display:block;}
   footer .names{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--text);}
-  footer .names em{font-family:'Pinyon Script',cursive;font-style:normal;color:var(--green-dark);padding:0 4px;}
-  footer .date{font-size:11px;letter-spacing:3px;color:var(--muted);margin-top:8px;}
+  footer .names em{font-family:'Italianno',cursive;font-style:normal;color:var(--green-dark);padding:0 4px;}
+  footer .date{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:3px;color:var(--muted);margin-top:8px;}
   footer .verse{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13.5px;color:var(--muted);margin-top:18px;}
 
   /* floating music button */
@@ -241,7 +248,8 @@
        Enquanto não existir, aparece o monograma em texto automaticamente. -->
   <img class="mono" src="fotos/monograma.png" alt="NA" data-mono>
   <div class="mono-text" hidden>N<span style="font-size:.7em">&amp;</span>A</div>
-  <div class="names">Nailla &amp; Adem</div>
+  <img class="names-img" src="fotos/nome-casal.png" alt="Nailla e Adem" data-lettering>
+  <div class="names" hidden>Nailla e Adem</div>
   <div class="sub">30 · 01 · 2027</div>
   <div class="tap">Toque para abrir</div>
   <div class="hint">com música ♪</div>
@@ -256,7 +264,8 @@
     <div class="hero-content">
       <img class="hero-mono" src="fotos/monograma.png" alt="NA" data-mono>
       <div class="hero-mono-text" hidden>N<span style="font-size:.7em">&amp;</span>A</div>
-      <div class="hero-names">Nailla <span class="amp">&amp;</span> Adem</div>
+      <img class="hero-names-img" src="fotos/nome-casal.png" alt="Nailla e Adem" data-lettering>
+      <div class="hero-names" hidden>Nailla <span class="amp">e</span> Adem</div>
       <div class="hero-loc">SÍTIO CAMPESTRE</div>
     </div>
   </div>
@@ -342,10 +351,11 @@
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 3l1.9 4.6L18 9l-4.1 1.4L12 15l-1.9-4.6L6 9l4.1-1.4z"/></svg>
         <p><b>Nossa paleta de cores</b>, caso queiram se inspirar na hora de escolher o look:</p>
         <div class="palette">
-          <div class="sw"><div class="dot" style="background:var(--white);"></div><div class="nm">Branco</div></div>
           <div class="sw"><div class="dot" style="background:var(--green);"></div><div class="nm">Verde</div></div>
-          <div class="sw"><div class="dot" style="background:var(--rose);"></div><div class="nm">Rosa claro</div></div>
+          <div class="sw"><div class="dot" style="background:var(--butter-deep);"></div><div class="nm">Dourado</div></div>
           <div class="sw"><div class="dot" style="background:var(--butter);"></div><div class="nm">Manteiga</div></div>
+          <div class="sw"><div class="dot" style="background:var(--rose-mid);"></div><div class="nm">Rosa</div></div>
+          <div class="sw"><div class="dot" style="background:var(--rose);"></div><div class="nm">Rosa claro</div></div>
         </div>
       </div>
 
@@ -400,7 +410,7 @@
       </div>
       ===== fim do PIX ===== -->
 
-      <div class="signature">Nailla &amp; Adem</div>
+      <img class="names-img" src="fotos/nome-casal.png" alt="Nailla e Adem" data-lettering style="width:min(56vw,220px);margin:22px auto 0 auto;">
       <div class="small-note">Com carinho, esperamos vocês</div>
     </div>
   </section>
@@ -433,9 +443,10 @@
 
   <!-- FOOTER -->
   <footer class="reveal">
-    <img class="mono" src="fotos/monograma.png" alt="NA" data-mono>
+    <img class="mono" src="fotos/brasao.png" alt="Nailla e Adem" data-mono>
     <div class="mono-text" hidden>N<span style="font-size:.7em">&amp;</span>A</div>
-    <div class="names">Nailla <em>&amp;</em> Adem</div>
+    <img class="names-img" src="fotos/nome-casal.png" alt="Nailla e Adem" data-lettering>
+    <div class="names" hidden>Nailla <em>e</em> Adem</div>
     <div class="date">30 DE JANEIRO DE 2027</div>
     <div class="verse">Que o nosso amor seja sempre assim: leve, verdadeiro e cheio de fé</div>
   </footer>
@@ -520,6 +531,16 @@
     ph.textContent = 'FOTO EM BREVE';
     img.replaceWith(ph);
   }
+  // Nome do casal: se o lettering nao carregar, mostra o nome escrito.
+  function letteringFallback(img){
+    img.hidden = true;
+    var alt = img.parentElement.querySelector('.names, .hero-names');
+    if(alt) alt.hidden = false;
+  }
+  document.querySelectorAll('img[data-lettering]').forEach(function(img){
+    img.addEventListener('error', function(){ letteringFallback(img); });
+    if(img.complete && img.naturalWidth === 0) letteringFallback(img);
+  });
   document.querySelectorAll('img[data-photo]').forEach(function(img){
     img.addEventListener('error', function(){ photoFallback(img); });
     if(img.complete && img.naturalWidth === 0) photoFallback(img);

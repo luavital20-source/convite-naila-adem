@@ -1,8 +1,0 @@
-Coloque aqui os arquivos com estes nomes exatos:
-
-  foto-1.jpg       -> foto de capa (tela inteira, no topo do convite)
-  foto-2.jpg       -> foto antes do "Manual dos convidados"
-  monograma.png    -> monograma, de preferencia em PNG com fundo transparente
-
-Enquanto nao existirem, o convite mostra um bloco "FOTO EM BREVE"
-e o monograma escrito como N&A.
