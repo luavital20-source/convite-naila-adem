@@ -54,8 +54,9 @@ Os arquivos que você enviou estão preservados em `originais/`.
 
 Está marcado com comentários `<!-- ... -->` dentro do `index.html`:
 
-- **Endereço completo do Sítio Campestre** — hoje está "Endereço completo em breve".
-- **Link do Google Maps** — hoje aponta para uma busca por "Sítio Campestre".
+- **Endereço completo do Sítio Campestre** — o botão "Ver no mapa" já leva ao
+  local certo, mas falta o endereço escrito acima dele (rua, número, bairro,
+  cidade — UF, CEP), no lugar de "Toque no botão abaixo para ver a localização".
 - **Versículo/frase** — está com 1 Coríntios 13:7; é só trocar o texto.
 - **PIX** (opcional) — bloco pronto, desativado, na seção de presentes.
 - **Confirmação por WhatsApp** (opcional) — botão pronto, desativado, no RSVP.
@@ -66,4 +67,5 @@ Está marcado com comentários `<!-- ... -->` dentro do `index.html`:
   "Toque para abrir" (celular só libera som depois de um toque). Botão flutuante
   para pausar e retomar.
 - Lista de presentes e confirmação: <https://noivos.casar.com/naillaeadem>
+- Localização: <https://maps.app.goo.gl/PqhrswBj7o6b23EV7>
 - Contagem regressiva até 30/01/2027, 16h (horário de Brasília).
