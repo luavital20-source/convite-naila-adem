@@ -29,7 +29,7 @@ mais exibida no convite):
 `#F1D3D4` e `#FCD9DF` rosa claro · `#FED4AA` pêssego
 
 **Dress code:** o manual pede que os convidados evitem **branco, amarelo
-manteiga e rosa claro** — cores reservadas à noiva e à decoração.
+manteiga e rosa claro** — cores reservadas.
 
 **Fontes**
 
