@@ -16,6 +16,22 @@ aparece nas três de uma vez.
 horário) precisa ser feita nos três arquivos. Os blocos opcionais de PIX e
 WhatsApp já estão traduzidos em cada versão.
 
+## Versão de arquivo único (`arquivo-unico/`)
+
+Para serviços de hospedagem que aceitam **um arquivo HTML só**, sem pasta de
+imagens. Cada arquivo tem as fotos, o monograma e o brasão embutidos dentro
+dele, em base64 — abre sozinho, sem depender de mais nada:
+
+- `arquivo-unico/convite-portugues.html`
+- `arquivo-unico/convite-bosnio.html`
+- `arquivo-unico/convite-holandes.html`
+
+Cada um tem cerca de 723 KB.
+
+**Estes arquivos são gerados, não editados à mão.** Ao mudar qualquer coisa
+no convite, altere `index.html`, `bs/index.html` e `nl/index.html`, e depois
+gere os arquivos únicos de novo a partir deles.
+
 **Data:** 30 de janeiro de 2027 (sábado), às 16h
 **Local:** Sítio Campestre — cerimônia e recepção no mesmo lugar
 
