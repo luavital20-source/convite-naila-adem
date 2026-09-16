@@ -1,6 +1,20 @@
 # Convite de casamento — Nailla & Adem
 
-Convite digital em página única (`index.html`), feito para abrir no celular.
+Convite digital feito para abrir no celular, em três idiomas.
+
+| Idioma | Arquivo | Endereço (depois de publicar) |
+|---|---|---|
+| Português | `index.html` | `/` |
+| Bósnio | `bs/index.html` | `/bs/` |
+| Holandês | `nl/index.html` | `/nl/` |
+
+As três páginas são idênticas em design, fotos e funcionamento — muda só o
+idioma. Todas usam as mesmas imagens da pasta `fotos/`, então uma foto trocada
+aparece nas três de uma vez.
+
+**Ao editar, lembre das três.** Uma mudança de conteúdo (endereço, versículo,
+horário) precisa ser feita nos três arquivos. Os blocos opcionais de PIX e
+WhatsApp já estão traduzidos em cada versão.
 
 **Data:** 30 de janeiro de 2027 (sábado), às 16h
 **Local:** Sítio Campestre — cerimônia e recepção no mesmo lugar
